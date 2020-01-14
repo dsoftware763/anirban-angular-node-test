@@ -1,0 +1,54 @@
+<div class="main-left-section">
+  <h6>Activity</h6>
+  <section class="section-left border min-height">
+    <form class="form-inline search border-bottom">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="search" aria-label="search">
+      </div>
+    </form>
+
+    <ul *ngIf="dataList.length" class="list-group">
+      <li class="list-group-item px-3 py-2 border-bottom {{i==selectedItem ? 'list-active':''}}"
+        *ngFor="let item of dataList;let i=index">
+        <div class="left-widget-content">
+          <div class="usr-img">
+            <img src="assets/img/image.png" alt="userImage">
+          </div>
+          <div class="left-widget-heading">
+            <div class="cursor-pointer" (click)="getToDo(item.id, i)">
+              <p class="name"><span>{{item.title}}</span> {{item.status}}</p>
+              <p class="detail">{{item.desc}}
+              </p>
+            </div>
+            <p class="timing">{{item.createdAt | date}}</p>
+            <div class="gallery py-1">
+              <img class="img-fluid" src="assets/img/1.png" alt="">
+              <img class="img-fluid" src="assets/img/1.png" alt="">
+              <p class="view-more pt-3"><a class="grey"> View All Photos</a></p>
+            </div>
+          </div>
+          <div class="more-setting dropdown">
+            <div class="dropdown">
+              <i class="fa fa-plus setting-ico"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  Review</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  Message</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
+                  Reschedule</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div *ngIf="!dataList.length" class="no-data"> No Data Available</div>
+  </section>
+</div>

@@ -1,0 +1,15 @@
+.page-layout {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 400px;
+  // height: stretch;
+  // Carded layout
+  &.carded {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 100%;
+  }
+}

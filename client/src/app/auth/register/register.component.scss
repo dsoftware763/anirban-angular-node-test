@@ -1,0 +1,65 @@
+.login-wrapper {
+  height: 100vh;
+  background: url(/assets/cover-1.jpg) 0 0 / cover no-repeat;
+  opacity: 0.8;
+}
+input.mat-input-element {
+  padding: 10px;
+}
+.box {
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  width: 320px;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    background: rgba(255, 255, 255, 0.6);
+    left: 0;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    z-index: -1;
+  }
+}
+.box.back {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  top: -20px;
+  opacity: 0.8;
+  z-index: -1;
+}
+.example-form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    width: 100%;
+  }
+}
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  .link-goto {
+    color: #ff0000;
+    font-size: 14px;
+    margin: auto 0;
+    text-decoration: underline;
+  }
+  .link-goto {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  .box {
+    width: 250px;
+  }
+}

@@ -1,0 +1,37 @@
+.menu-color {
+	border-top: 1px solid gray;
+	a {
+		color: #383838;
+	}
+}
+.mat-toolbar {
+	height: 50px;
+	position: fixed;
+	z-index: 9;
+	background: white;
+}
+div {
+	overflow: inherit;
+}
+a {
+	text-decoration: none;
+	white-space: normal;
+}
+button {
+	min-width: min-content;
+}
+.example-icon {
+	padding: 0 14px;
+}
+.example-spacer {
+	flex: 1 1 auto;
+}
+mat-sidenav {
+	position: fixed;
+	top: 50px;
+	width: 200px;
+}
+.active {
+	color: #ff5560 !important;
+	border-bottom: 3px solid #00d290;
+}

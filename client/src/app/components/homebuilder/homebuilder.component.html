@@ -1,0 +1,37 @@
+<div class="main-right-section">
+  <h6>Homebuilder</h6>
+  <section class="section-right border min-height">
+    <div class="head border-bottom">
+      <button class="btn btn-outline-success" type="button">Add Items</button>
+      <input type="text" class="" placeholder="search" aria-label="search">
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    <ul *ngIf="dataItem.length" class="list-group cstom">
+      <li class="list-group-item p-2 border-bottom" *ngFor="let i of dataItem">
+        <div class="widget-content">
+          <div class="widget-content-left">
+            <div class="custom-checkbox custom-control">
+              <input (click)="updateStatus($event,i)" [checked]="i.isComplete" type="checkbox" id="{{i.id}}"
+                class="custom-control-input">
+              <label class="custom-control-label" for="{{i.id}}">&nbsp;</label>
+            </div>
+          </div>
+          <div class="widget-heading fix-width-left">
+            <b>{{i.todo}}</b>
+            <p>{{i.desc}}</p>
+          </div>
+
+          <div class="widget-content-right widget-content-actions">
+            <p class="red">{{i.info}}</p>
+            <div class="badge badge-pill badge-danger">{{i.state}}</div>
+          </div>
+          <div class="usr-img">
+            <img src="assets/img/image.png" alt="">
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div *ngIf="!dataItem.length" class="no-data"> No Data Available</div>
+  </section>
+</div>

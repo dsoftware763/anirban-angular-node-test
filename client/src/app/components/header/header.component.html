@@ -1,0 +1,58 @@
+<div class="navbar navbar-expand-sm text-muted p-0 clearfix" id="myHeader">
+  <mat-toolbar color="">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a class="companyName">
+      <a class="navbar-logo text-muted"><img class="img-fluid" src="assets/img/logo.png" alt=""></a>
+    </a>
+    <div fxShow="true" fxHide.lt-md="true" class="nav navbar-nav ml-auto menu">
+      <a class="px-4" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a class="px-4" routerLink="/project" routerLinkActive="active">Project</a>
+      <a class="px-4" routerLink="/toolshelf" routerLinkActive="active">Toolshelf</a>
+      <a class="px-4" routerLink="/network" routerLinkActive="active">Network</a>
+    </div>
+
+    <ul class="nav navbar-nav ml-auto right-ico">
+      <li class="nav-item"> <a class="nav-link"><i class="fa fa-envelope-o" aria-hidden="true">
+            <sup>
+              <span class="badge badge-info">0</span>
+            </sup>
+          </i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="nav-item profile-img">
+        <a class="nav-link" [matMenuTriggerFor]="menu">
+          <img class="img-fluid" src="assets/img/image-1.png" alt="">
+        </a>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+      </li>
+    </ul>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column" class="menu-color">
+        <a class="py-2 px-4" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <a class="py-2 px-4" routerLink="/pprojects" routerLinkActive="active">Project</a>
+        <a class="py-2 px-4" routerLink="/toolshelf" routerLinkActive="active">Toolshelf</a>
+        <a class="py-2 px-4" routerLink="/network" routerLinkActive="active">Network</a>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
