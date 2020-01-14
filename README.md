@@ -19,7 +19,12 @@
     DB_PASS=root
     DB_NAME=anirbantest
     ```
-4. Start your app in dev mode
+    
+4. Make sure you have existing database same as the name in .env file
+    To use dump :` npm run restore`
+    
+    
+5. Start your app in dev mode
 
     ```
     npm run dev
@@ -29,11 +34,12 @@
         1. To run backend: `npm run start:server`
         2. To run frontend: `npm run start:client`
 
-5. Building the application
+6. Building the application
     ```
     npm run build
     ```
     and post build run the application with `npm start`. Both applications accessible on `localhost:3030`
+
 
 ## Known Issues
 
